@@ -16,4 +16,3 @@ export type GroupByRet = {
   [key in ScoreGradeKey]: Student[]
 }
 
-
