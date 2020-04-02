@@ -9,7 +9,7 @@ import {
   tree0, names0,
   names1, tree1,
   names2, tree2,
-  names3, tree3, names3err,
+  names3, tree3, names3err1, names3err2, names3err3,
 } from './test.config'
 import { TestTreeRow } from './test.model'
 
@@ -69,7 +69,11 @@ describe(filename, () => {
     })
 
     it('error', async () => {
-      const arr: TestTreeRow[] = [ [tree3, names3err] ]
+      const arr: TestTreeRow[] = [
+        [tree3, names3err1],
+        [tree3, names3err2],
+        [tree3, names3err3],
+      ]
 
       await ofrom(arr)
         .pipe(
@@ -89,7 +93,7 @@ describe(filename, () => {
                     const data = {
                       index,
                       nodeType,
-                      shouldName: name,
+                      shouldNameButWrong: name,
                       gotName: retName,
                     }
                     assert(retName && retName !== name, `Should got data: ${JSON.stringify(data)}`)

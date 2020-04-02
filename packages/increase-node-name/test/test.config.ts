@@ -113,8 +113,16 @@ export const names3: TestNames = {
   Button: 'button_2',
   View: 'view_1',
 }
-export const names3err: TestNames = {
+export const names3err1: TestNames = {
   Button: 'button_1',
   View: 'view_2',
+}
+export const names3err2: TestNames = {
+  Button: 'button_0',
+  View: 'view_0',
+}
+export const names3err3: TestNames = {
+  Button: 'button_1',
+  View: 'view_5',
 }
 
