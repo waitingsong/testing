@@ -2,7 +2,6 @@ import {
   Student,
   GroupByRet,
   ScoreGrade,
-  ScoreGradeKey,
 } from './model'
 
 
@@ -31,7 +30,7 @@ function valiateData(data: unknown): void {
   }
 }
 
-function getGrade(score: number): ScoreGradeKey {
+function getGrade(score: number): ScoreGrade {
   if (typeof score !== 'number') {
     throw new TypeError(`Invalid typeof score value: "${score}"`)
   }
